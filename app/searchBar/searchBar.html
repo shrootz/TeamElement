@@ -1,1 +1,22 @@
-<span>Name: {{$ctrl.hero.name}}</span>
+<div class="container-fluid">
+  <label for="select" class="col-xs-2 control-label">Select Your Data</label>
+  <br><br>
+  <form class="form-inline col-xs-12">
+
+      <div class="form-group col-xs-4">
+        <label for="exampleInputName2">Options</label>
+      </div>
+        <div class="form-group col-xs-4">
+          <select class="form-control" id="select" style="width: 50%">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <button type="button" class="btn btn-default" aria-label="Plus">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+  </form>
+</div>
