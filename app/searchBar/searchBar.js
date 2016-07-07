@@ -1,14 +1,16 @@
 'use strict';
 
-angular.module('myApp.searchBar', ['ngRoute'])
+function SearchBarController() {
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/searchBar', {
+}
+
+angular.module('myApp').component('search', {
+    restrict: 'E',
+    scope: false,
+    replace: true,
     templateUrl: 'searchBar/searchBar.html',
-    controller: 'searchBarCtrl'
-  });
-}])
-
-.controller('searchBarCtrl', [function() {
-
-}]);
+    controller: SearchBarController,
+	bindings: {
+	hero: '='
+	}
+});
