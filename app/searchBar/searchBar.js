@@ -1,6 +1,6 @@
 'use strict';
 
-function SearchBarController($scope,$http,_) {
+function SearchBarController($scope,$http) {
 	var customerAmtArray = [];
   	$scope.onclick = function(){
 	  	$http({
