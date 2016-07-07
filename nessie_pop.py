@@ -47,7 +47,7 @@ i = 0
 for cust in customer_list:
 	url = "http://api.reimaginebanking.com/customers/%s/accounts?key="%(cust) + api_key 
 	#print url
-	payload = 	"{ \"type\": \"Credit Card\", \"nickname\": %s\"s Credit Card\", \"rewards\": 1000000, \"balance\": 1000000, \"account_number\": \"1234567890987654\"}"%(customer_name_list[i])
+	payload = 	"{ \"type\": \"Credit Card\", \"nickname\": \"My Credit Card\", \"rewards\": 1000000, \"balance\": 1000000, \"account_number\": \"1234567890987654\"}"%(customer_name_list[i])
 	i = i + 1
 	#print payload
 	try :
@@ -134,11 +134,11 @@ for acc in account_list:
 			#any spend
 			amount = random.randint(1, 5000)
 		i = i + 1
-		url = "http://api.reimaginebanking.com//account/%s/purchases?key="%(acc) + api_key
+		url = "http://api.reimaginebanking.com/accounts/%s/purchases?key="%(acc) + api_key
 		payload = " {\"merchant_id\": \"%s\", \"medium\": \"balance\",\"purchase_date\": \"2016-07-06\",\"amount\": %d,\"status\": \"pending\",\"description\": \"string\"} "%(current_merchant_id,amount)
 		print payload
 		try :
 			response = requests.post(url, data=payload, headers=headers)
-			#print "success"
+			print "success"
 		except : 
 			print "failure"
