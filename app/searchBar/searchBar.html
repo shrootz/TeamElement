@@ -8,11 +8,11 @@
 	  		</div>
 			<div class="form-group col-xs-4">
 		  		<select class="form-control" id="select" style="width: 50%">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
+					<option>Merchant</option>
+					<option>Total Spending</option>
+					<option>Categories</option>
+					<option>Frequency</option>
+					<option>Time</option>
 			  	</select>
 			</div>
 			<button type="button" class="btn btn-default col-xs-2" aria-label="Plus" ng-click="show=0">
@@ -28,20 +28,20 @@
 	  		</div>
 			<div class="form-group col-xs-2">
 		  		<select class="form-control" id="select" style="width: 50%">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
+					<option>Merchant</option>
+					<option>Total Spending</option>
+					<option>Categories</option>
+					<option>Frequency</option>
+					<option>Time</option>
 			  	</select>
 			</div>
 			<div class="form-group col-xs-2">
 		  		<select class="form-control" id="select" style="width: 50%">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
+					<option>Merchant</option>
+					<option>Total Spending</option>
+					<option>Categories</option>
+					<option>Frequency</option>
+					<option>Time</option>
 			  	</select>
 			</div>
 
@@ -54,10 +54,10 @@
 	</form>
 
 	<div ng-if="display == true" style="width: 1000px;margin: 0 auto;">
-	<canvas style="width: 100%" id="bar" class="chart chart-bar"
-  		chart-data="finalArr" chart-labels="labels" chart-series="series"></canvas>
-	<canvas id="pie" class="chart chart-pie"
-  		chart-data="pieData" chart-labels="labels" chart-options="options">
-	</canvas> 
+		<canvas style="width: 100%" id="bar" class="chart chart-bar"
+	  		chart-data="finalArr" chart-labels="labels" chart-series="series"></canvas>
+		<canvas id="pie" class="chart chart-pie"
+	  		chart-data="pieData" chart-labels="labels" chart-options="options">
+		</canvas> 
 	</div>
 </div>

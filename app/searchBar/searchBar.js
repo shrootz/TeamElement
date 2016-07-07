@@ -80,7 +80,7 @@ function SearchBarController($scope, $http, $q) {
 		console.log("hello");
 	}
 		$scope.data = [[65, 59, 80, 81, 56, 55, 40]];
-	$scope.labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July','lan'];
+	$scope.labels = ['0-5000', '5000-10000', '10000-15000', '15000-20000', '20000-25000', '25000-30000', '30000-35000','>35000'];
 	$scope.series = ["something"];
 }
 
