@@ -1,6 +1,6 @@
 'use strict';
 
-function SearchBarController($scope,$http) {
+function SearchBarController($scope,$http,_) {
 	var customerAmtArray = [];
   	$scope.onclick = function(){
 	  	$http({
@@ -19,6 +19,7 @@ function SearchBarController($scope,$http) {
 					var food = 0;
 					var clothes = 0;
 					var other = 0;
+					var merchant_id = 0;
 					for (var i = 0; i<response.data.length; i++){
 						id = id +response.data[i].amount;
 						merchant_id = response.data[i].merchant_id;
