@@ -7,7 +7,7 @@ from requests.auth import HTTPDigestAuth
 import json
 import random
 
-api_key = 'INSERT_API_HERE' 
+api_key = 'INSERT_API_KEY_HERE' 
 headers = {'content-type': 'application/json'}
 customer_list = []
 customer_name_list = []
@@ -18,18 +18,20 @@ entertainment_merchant_list  = []
 clothes_merchant_list = []
 
 #POST /customer
-url = "http://api.reimaginebanking.com/customers?key=" + api_key
-print url
-first_name = names.get_first_name()
-last_name = names.get_last_name()
-payload = " { \"first_name\": \"%s\", \"last_name\": \"%s\", \"address\": { \"street_number\": \"123\", \"street_name\": \"abc\", \"city\": \"aus\", \"state\": \"TX\", \"zip\": \"78744\" } } " %(first_name,last_name)
-print payload
-try :
-	response = requests.post(url, data=payload, headers=headers)
-	#print "success"
-except : 
-	print response.text
-
+k = 0
+while (k<1):
+	url = "http://api.reimaginebanking.com/customers?key=" + api_key
+	print url
+	first_name = names.get_first_name()
+	last_name = names.get_last_name()
+	payload = " { \"first_name\": \"%s\", \"last_name\": \"%s\", \"address\": { \"street_number\": \"123\", \"street_name\": \"abc\", \"city\": \"aus\", \"state\": \"TX\", \"zip\": \"78744\" } } " %(first_name,last_name)
+	print payload
+	try :
+		response = requests.post(url, data=payload, headers=headers)
+		#print "success"
+	except : 
+		print response.text
+	k = k + 1
 
 #GET /customer _id's
 url = "http://api.reimaginebanking.com/customers?key=" + api_key
@@ -47,7 +49,7 @@ i = 0
 for cust in customer_list:
 	url = "http://api.reimaginebanking.com/customers/%s/accounts?key="%(cust) + api_key 
 	#print url
-	payload = 	"{ \"type\": \"Credit Card\", \"nickname\": \"My Credit Card\", \"rewards\": 1000000, \"balance\": 1000000, \"account_number\": \"1234567890987654\"}"%(customer_name_list[i])
+	payload = 	"{ \"type\": \"Credit Card\", \"nickname\": \"My Credit Card\", \"rewards\": 1000000, \"balance\": 1000000, \"account_number\": \"1234567890987654\"}"
 	i = i + 1
 	#print payload
 	try :
@@ -135,6 +137,7 @@ for acc in account_list:
 			amount = random.randint(1, 5000)
 		i = i + 1
 		url = "http://api.reimaginebanking.com/accounts/%s/purchases?key="%(acc) + api_key
+		print url
 		payload = " {\"merchant_id\": \"%s\", \"medium\": \"balance\",\"purchase_date\": \"2016-07-06\",\"amount\": %d,\"status\": \"pending\",\"description\": \"string\"} "%(current_merchant_id,amount)
 		print payload
 		try :
