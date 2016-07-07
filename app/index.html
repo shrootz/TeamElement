@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp" class="no-js">
 <head>
-  <meta charset="utf-8">
-  <title>Element</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="app.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body ng-app="myApp">
+	<meta charset="utf-8">
+	<title>Element</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="app.css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-kVo/Eh0sv7ZdiwZK32nRsp1FrDT3sLRLx3zVpSSTI9UdO5H02LJNLBg5F1gwvKg0" crossorigin="anonymous">
 
-	<div class="row container-fluid" ng-controller="mainCtrl as ctrl" >
-		<div class="col-md-6 col-md-offset-3">
-		  	<b>Search Bar</b><br>
-		  	<search hero="ctrl.hero"></search>
-	  	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+<body ng-controller="mainCtrl as ctrl">
+
+	<div class="jumbotron container-fluid">
+  		<h1>Welcome to Element</h1>
+  		<p>This a simple data visulization web application. Designed to visualize credit card transactions. Blah BLah blah</p>
 	</div>
 
-  <script src="app.js"></script>
-  <script src="searchBar/searchBar.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<search hero="ctrl.hero"></search>
+	<br><br><br>
+	<summary></summary>
+
+	<script src="app.js"></script>
+	<script src="searchBar/searchBar.js"></script>
+	<script src="dataSummary/dataSummary.js"></script>
 
 </body>
 </html>
