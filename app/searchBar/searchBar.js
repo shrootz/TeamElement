@@ -11,6 +11,6 @@ angular.module('myApp').component('search', {
     templateUrl: 'searchBar/searchBar.html',
     controller: SearchBarController,
 	bindings: {
-	hero: '='
+		hero: '='
 	}
 });
