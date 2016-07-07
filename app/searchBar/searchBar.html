@@ -52,4 +52,12 @@
 			<button ng-click="onclick()" type="button" class="btn btn-default col-xs-2">Search</button>
 	   </div>
 	</form>
+
+	<div ng-if="display == true" style="width: 1000px;margin: 0 auto;">
+	<canvas style="width: 100%" id="bar" class="chart chart-bar"
+  		chart-data="finalArr" chart-labels="labels" chart-series="series"></canvas>
+	<canvas id="pie" class="chart chart-pie"
+  		chart-data="pieData" chart-labels="labels" chart-options="options">
+	</canvas> 
+	</div>
 </div>
