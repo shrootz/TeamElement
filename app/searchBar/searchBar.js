@@ -14,9 +14,12 @@ function SearchBarController($scope,$http) {
 				  method: 'GET',
 				  url: url
 				}).then(function successCallback(response) {
-					console.log(response);
-					console.log(response.data);
-					console.log("YAY");
+					var id = 0;
+					for (var i = 0; i<response.data.length; i++){
+						id = id +response.data[i].amount;
+					}
+					console.log(id);
+					console.log(response.data)
 			  	}, function errorCallback(response) {
 
 			  	});
