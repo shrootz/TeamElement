@@ -7,7 +7,7 @@ from requests.auth import HTTPDigestAuth
 import json
 import random
 
-api_key = 'INSERT_API_KEY_HERE' 
+api_key = 'REMOVE API KEY'
 headers = {'content-type': 'application/json'}
 customer_list = []
 customer_name_list = []
@@ -27,10 +27,11 @@ while (k<1):
 	payload = " { \"first_name\": \"%s\", \"last_name\": \"%s\", \"address\": { \"street_number\": \"123\", \"street_name\": \"abc\", \"city\": \"aus\", \"state\": \"TX\", \"zip\": \"78744\" } } " %(first_name,last_name)
 	print payload
 	try :
+		print "pre_response"
 		response = requests.post(url, data=payload, headers=headers)
-		#print "success"
+		print "success"
 	except : 
-		print response.text
+		print "error"
 	k = k + 1
 
 #GET /customer _id's
@@ -54,7 +55,7 @@ for cust in customer_list:
 	#print payload
 	try :
 		response = requests.post(url, data=payload, headers=headers)
-		#print "success"
+		print "success"
 	except : 
 		print "failure"
 
