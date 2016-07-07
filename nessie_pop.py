@@ -7,7 +7,7 @@ from requests.auth import HTTPDigestAuth
 import json
 import random
 
-api_key = '8c5bbb4e9fc2ff7fe35aa72ca63739e3'
+api_key = 'INSERT_API_HERE' 
 headers = {'content-type': 'application/json'}
 customer_list = []
 customer_name_list = []
